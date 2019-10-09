@@ -1,6 +1,6 @@
 # Alfred Workflow for ghq
 
-> Search and open ghq managed repositories in Visual Studio Code or iTerm.
+> Search and open [ghq](https://github.com/motemen/ghq) managed repositories in Visual Studio Code or iTerm.
 
 ## Install
 
