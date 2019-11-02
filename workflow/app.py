@@ -3,6 +3,7 @@
 import subprocess
 import json
 import sys
+import os.path
 
 
 def captureShell(command):
@@ -11,8 +12,9 @@ def captureShell(command):
 
 
 def ghqList():
-    fullPath = captureShell('/usr/local/bin/ghq list -p')
-    keys = captureShell('/usr/local/bin/ghq list --unique')
+    ghqRoot = captureShell('/usr/local/bin/ghq root')[0]
+    fullPath = captureShell('/usr/bin/find {} -type d -maxdepth 3 -depth 3'.format(ghqRoot))
+    keys = list(map(lambda path: os.path.basename(path), fullPath))
     return zip(keys, fullPath)
 
 
