@@ -27,6 +27,8 @@ def getIcon(mode):
         return {"type": "fileicon", "path": "/Applications/Visual Studio Code.app"}
     elif mode == 'iterm':
         return {"type": "fileicon", "path": "/Applications/iTerm.app"}
+    elif mode == 'fork':
+        return {"type": "fileicon", "path": "/Applications/Fork.app"}
 
 
 if __name__ == '__main__':
