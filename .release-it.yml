@@ -1,0 +1,9 @@
+# https://github.com/release-it/release-it/blob/master/config/release-it.json
+git:
+  commitMessage: 'chore: release v${version}'
+github:
+  release: true
+  assets:
+    - ghq.alfredworkflow
+hooks:
+  before:release: make package
